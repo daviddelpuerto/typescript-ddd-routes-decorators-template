@@ -2,7 +2,7 @@ import compress from 'compression';
 import express, { Express } from 'express';
 import helmet from 'helmet';
 import * as http from 'http';
-import router from './routes';
+import { registerRoutes } from './routes';
 import loggerMiddleware from './middlewares/logger.middleware';
 import Logger from '../Shared/domain/Logger';
 
@@ -25,7 +25,8 @@ export class Server {
     this.express.use(helmet.frameguard({ action: 'deny' }));
     this.express.use(compress());
     this.express.use(loggerMiddleware);
-    this.express.use(router);
+
+    registerRoutes(this.express);
   }
 
   async listen(): Promise<void> {
