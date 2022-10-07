@@ -1,5 +1,5 @@
 {
-  "name": "typescript-ddd-template",
+  "name": "typescript-ddd-routes-decorators-template",
   "version": "0.1.0",
   "description": "Nodejs typescript starter project following DDD principles and best practices with docker setup ready to go",
   "scripts": {
