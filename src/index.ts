@@ -1,2 +1,2 @@
-import './Shared/infrastructure/bootstrap';
-import './app/start';
+import 'reflect-metadata';
+import './main';
