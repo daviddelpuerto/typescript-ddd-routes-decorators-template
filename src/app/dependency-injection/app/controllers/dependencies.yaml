@@ -1,0 +1,6 @@
+services:
+  App.Controllers.ApiController:
+    class: ../../../routes/Api.controller
+    tags:
+      - { name: controller }
+
